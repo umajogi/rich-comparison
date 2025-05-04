@@ -1,0 +1,24 @@
+#rich comparison methods or special methods in python
+class box:
+    def __init__(self,volume):
+        self.volume=volume
+    def __lt__(self,other):
+        return self.volume<other.volume
+    def __gt__(self,other):
+        return self.volume>other.volume
+    def __ge__(self,other):
+        return self.volume>=other.volume
+    def __ne__(self,other):
+        return self.volume!=other.volume
+    def __le__(self,other):
+        return self.volume<=other.volume
+    def __eq__(self, other):
+        return self.volume==other.volume
+box1=box(10)
+box2=box(20)
+print(box1<box2)
+print(box1>box2)
+print(box1>=box2)
+print(box1!=box2)
+print(box1<=box2)
+print(box1==box2)
